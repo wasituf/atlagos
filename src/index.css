@@ -1,13 +1,151 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Ubuntu:ital,wght@0,400;1,300&display=swap');
+
+/* Variables */
+:root {
+  --color-primary: #8d33ff;
+  --color-dark: #222222;
+  --color-light: #f1f1f1;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+a {
+  color: #000;
+}
+
+/* Utility */
+.btn-primary {
+  color: #fff;
+  background-color: var(--color-primary);
+  padding: 1rem 2rem;
+  border-radius: 50vh;
+  border: none;
+  text-decoration: none;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+.btn-secondary {
+  color: var(--color-primary);
+  background-color: #fff;
+  border-radius: 50vh;
+  padding: 1rem 2rem;
+  border: none;
+  text-decoration: none;
+}
+
+/* Header */
+.header {
+  margin: 0 auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.logo {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 67.77px;
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+/* Navigation */
+@media (max-width: 600px) {
+  .logo {
+    font-size: 41.89px;
+  }
+}
+
+.nav-items {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: reverse;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.nav-link {
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+  text-decoration: none;
+  margin-right: 1rem;
+}
+
+.nav-link:last-child {
+  margin-right: 0;
+}
+
+.active {
+  padding-bottom: 4px;
+  border-bottom: 2px solid var(--color-primary);
+}
+
+.dropdown {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .nav-items {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-items.closed a {
+    display: none;
+  }
+
+  .nav-items.closed a.active {
+    display: inline-block;
+  }
+
+  .nav-link {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .active {
+    order: -1;
+  }
+
+  .dropdown {
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    right: calc(48.5% - 120px);
+    top: 82px;
+  }
+}
+
+/* Home Section */
+
+.hero-img {
+  margin: 0 auto;
+  max-width: 1080px;
+  height: 600px;
+  background: url(./assets/hero-img.png);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.hero-heading {
+  color: #c1c1c1;
+  font-weight: 400;
+  font-size: 109.66px;
+  text-align: center;
+}
+
+.hero-heading span {
+  color: #fff;
+}
+
+.hero-img .btn-primary {
+  font-size: 25.89px;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 }
