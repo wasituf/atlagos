@@ -8,8 +8,8 @@ function Home() {
       {/* Hero */}
       <section className='hero-img'>
         <h1 className='hero-heading'>
-          Don't be <span>Great</span> <br />{' '}
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Just be
+          Don't be <span>Great</span> <br />
+          Just be
           <span> Átlagos</span>
         </h1>
         <Button text='Become More' type='btn-primary' link='/sign-up' />

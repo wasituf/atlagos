@@ -24,12 +24,13 @@ a {
 
 /* Utility */
 .btn {
+  font-weight: 500;
   padding: 1rem 2rem;
   border-radius: 50vh;
   border: none;
   text-decoration: none;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
-  transition: transform 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
 
 .btn:hover {
@@ -44,6 +45,26 @@ a {
 .btn-secondary {
   color: var(--color-primary);
   background-color: #fff;
+}
+
+.form-control {
+  padding: 1rem;
+  background: var(--color-light);
+  border: none;
+  outline: none;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+  display: block;
+  margin: 0 auto;
+  width: 440px;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+@media (max-width: 600px) {
+  .form-control {
+    width: 75vw;
+  }
 }
 
 /* Header */
@@ -140,8 +161,102 @@ a {
   }
 }
 
-/* Home Section */
+/* Newsletter */
+.newsletter {
+  background: linear-gradient(90deg, #8d33ff 0%, rgba(141, 51, 255, 0.75) 100%);
+  text-align: center;
+  min-height: 240px;
+  padding: 1rem 0;
+  margin-top: 1rem;
+}
 
+.newsletter-title {
+  color: #fff;
+  font-size: 25.89px;
+  font-weight: 400;
+}
+
+.newsletter-title span.lead {
+  font-size: 16px;
+}
+
+.newsletter-form .btn {
+  font-size: 18px;
+  padding: 0.75rem 2rem;
+}
+
+.newsletter-form .btn:hover {
+  background: #ddd;
+}
+
+@media (max-width: 768px) {
+  .newsletter-title {
+    font-size: 20px;
+  }
+}
+
+/* Footer */
+.footer {
+  background: #323232;
+  padding-top: 2rem;
+  padding-bottom: 0.5rem;
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.footer-nav-link {
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+  margin-right: 2rem;
+}
+
+.footer-nav-link:last-child {
+  margin-right: 0;
+}
+
+.footer-nav-link:hover {
+  border-bottom: 1px solid #fff;
+  margin-bottom: -2px; /* fixes glitchiness */
+}
+
+.copyright {
+  font-size: 12px;
+  text-align: center;
+  color: var(--color-light);
+}
+
+@media (max-width: 600px) {
+  .footer-nav {
+    flex-direction: column;
+  }
+
+  .footer-nav-link {
+    margin-right: 0;
+    margin-bottom: 1.5rem;
+    font-size: 16px;
+  }
+
+  .footer-nav-link:hover {
+    border-bottom: none;
+    margin-bottom: 1.5rem;
+  }
+
+  .footer-nav-link:last-child {
+    margin-bottom: 0;
+  }
+
+  .copyright {
+    font-size: 14px;
+  }
+}
+
+/* Home Section */
 .hero-img {
   margin: 0 auto;
   max-width: 1080px;

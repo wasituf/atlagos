@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom'
 
-function Button({ text, type, link }) {
+function Button({ text, type, link, submit }) {
   return (
-    <Link to={link} className={'btn ' + type}>
+    <Link type={submit && 'submit'} to={link} className={'btn ' + type}>
       {text}
     </Link>
   )
