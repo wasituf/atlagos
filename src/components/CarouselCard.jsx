@@ -1,6 +1,12 @@
 import { useNavigate } from 'react-router-dom'
 
-function CarouselCard({ title, icon, type }) {
+function CarouselCard({ title, icon, type, link }) {
+  const navigate = useNavigate()
+
+  const onClick = () => {
+    navigate(link)
+  }
+
   return (
     <div
       className={
@@ -8,6 +14,7 @@ function CarouselCard({ title, icon, type }) {
           ? 'carousel-card carousel-card-primary'
           : ' carousel-card carousel-card-secondary'
       }
+      onClick={onClick}
     >
       <h3 className='carousel-title'>{title}</h3>
       {icon}
