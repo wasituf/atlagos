@@ -4,13 +4,11 @@ import Footer from './components/Footer'
 import Home from './pages/Home'
 import About from './pages/About'
 import Contact from './pages/Contact'
-import ChatPlugin from './components/ChatPlugin'
 
 function App() {
   return (
     <div className='App'>
       <Router>
-        <ChatPlugin />
         <Header />
         <Routes>
           <Route path='/' element={<Home />} />
